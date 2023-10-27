@@ -7,3 +7,4 @@
 7. All icons are vector assets
 8. Search functionality is not added
 9. Empty cart scenario is handled
+10. Shoe details screen functionality is partially done

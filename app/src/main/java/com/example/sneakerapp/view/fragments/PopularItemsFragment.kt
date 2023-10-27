@@ -9,10 +9,10 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.sneakerapp.R
 import com.example.sneakerapp.databinding.FragmentPopularItemsBinding
 import com.example.sneakerapp.view.adapter.ProductItemsAdapter
 import com.example.sneakerapp.viewmodel.PopularViewModel
-
 
 class PopularItemsFragment : Fragment() {
     private lateinit var popularViewModel: PopularViewModel
@@ -45,12 +45,19 @@ class PopularItemsFragment : Fragment() {
                 binding.itemsRecyclerview.apply {
                     layoutManager = GridLayoutManager(activity, 2)
                     adapter = value.items?.let { ProductItemsAdapter(it.shoeDetailsList) { shoe->
-                        Log.d("hello", shoe.name.toString())
+                        navigateToDetailsFragment()
                     } }
 
                 }
             }
 
         })
+    }
+
+    private fun navigateToDetailsFragment() {
+        val fragmentTransaction = activity?.supportFragmentManager?.beginTransaction()
+        fragmentTransaction?.replace(R.id.fragment_container, ShoeDetailsFragment(), "")
+        fragmentTransaction?.commit()
+        true
     }
 }
