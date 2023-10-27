@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">SneakerApp</string>
+
+    <string name="sneakership_title">Sneakership</string>
+    <string name="popular_title">Popular</string>
+    <string name="sort_by_title">Sort by</string>
+    <string name="cart">Cart</string>
+    <string name="order_details">Order Details</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="taxes">Taxes and Charges</string>
+    <string name="total">Total</string>
+    <string name="check_out">Check Out</string>
+    <string name="size">Size (uk)</string>
+    <string name="colour">Colour</string>
+    <string name="price">Price</string>
+    <string name="add_to_cart">Add to Cart</string>
+</resources>

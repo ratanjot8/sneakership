@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.fragments.CartFragment">
+
+        <ImageView
+            android:id="@+id/back_imageview"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/left_arrow_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cart_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/cart"
+            android:textColor="#FF8976"
+            android:textSize="32dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/back_imageview"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/items_recyclerview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cart_textview" />
+
+        <TextView
+            android:id="@+id/orderDetails_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/order_details"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/items_recyclerview" />
+
+        <ImageView
+            android:id="@+id/error_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/error_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/orderDetails_textview"
+            app:layout_constraintStart_toEndOf="@+id/orderDetails_textview"
+            app:layout_constraintTop_toTopOf="@+id/orderDetails_textview" />
+
+        <TextView
+            android:id="@+id/subTotal_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="Subtotal : $398"
+            android:textColor="#ACACAC"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/orderDetails_textview" />
+
+        <TextView
+            android:id="@+id/taxesCharges_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:text="Taxes and Charges : $40"
+            android:textColor="#ACACAC"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/subTotal_textview" />
+
+        <TextView
+            android:id="@+id/total_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:text="Total : "
+            android:textColor="#ACACAC"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/taxesCharges_textview" />
+
+        <TextView
+            android:id="@+id/totalValue_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="$438"
+            android:textColor="#FF8976"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/total_textview"
+            app:layout_constraintTop_toBottomOf="@+id/taxesCharges_textview" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/checkOutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_corner_button"
+            android:paddingLeft="16dp"
+
+            android:paddingRight="16dp"
+            android:text="$ Check Out"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/totalValue_textview"
+            app:layout_constraintTop_toBottomOf="@+id/taxesCharges_textview" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

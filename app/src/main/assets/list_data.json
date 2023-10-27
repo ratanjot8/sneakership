@@ -1,0 +1,76 @@
+{
+    "shoeDetailsList": [
+        {
+            "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+            "brand": "string",
+            "colorway": "string",
+            "gender": "string",
+            "media": {
+                "imageUrl": "string",
+                "smallImageUrl": "string",
+                "thumbUrl": "string"
+            },
+            "releaseDate": "2022-12-15",
+            "retailPrice": 990,
+            "styleId": "string",
+            "shoe": "string",
+            "name": "Nike Air Pegasus",
+            "title": "string",
+            "year": 0
+        },
+        {
+            "id": "3fa85f64-5717-4562-b3fc-2c963f66afa7",
+            "brand": "string",
+            "colorway": "string",
+            "gender": "string",
+            "media": {
+                "imageUrl": "string",
+                "smallImageUrl": "string",
+                "thumbUrl": "string"
+            },
+            "releaseDate": "2022-12-15",
+            "retailPrice": 900,
+            "styleId": "string",
+            "shoe": "Nike Air Winflo",
+            "name": "Nike Air Winflo",
+            "title": "string",
+            "year": 0
+        },
+        {
+            "id": "3fa85f64-5717-4562-b3fc-2c963f66afa8",
+            "brand": "string",
+            "colorway": "string",
+            "gender": "string",
+            "media": {
+                "imageUrl": "string",
+                "smallImageUrl": "string",
+                "thumbUrl": "string"
+            },
+            "releaseDate": "2022-12-15",
+            "retailPrice": 500,
+            "styleId": "string",
+            "shoe": "Nike Downshifter",
+            "name": "Nike Downshifter",
+            "title": "string",
+            "year": 0
+        },
+        {
+            "id": "3fa85f64-5717-4562-b3fc-2c963f66afa9",
+            "brand": "string",
+            "colorway": "string",
+            "gender": "string",
+            "media": {
+                "imageUrl": "string",
+                "smallImageUrl": "string",
+                "thumbUrl": "string"
+            },
+            "releaseDate": "2022-12-15",
+            "retailPrice": 600,
+            "styleId": "string",
+            "shoe": "Nike Flex",
+            "name": "Nike Flex",
+            "title": "string",
+            "year": 0
+        }
+    ]
+}
