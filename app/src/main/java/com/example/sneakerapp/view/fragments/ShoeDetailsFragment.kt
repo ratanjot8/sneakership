@@ -25,14 +25,4 @@ class ShoeDetailsFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        /*binding.sneakership.setOnClickListener {
-            val fragmentTransaction = activity?.supportFragmentManager?.beginTransaction()
-            fragmentTransaction?.remove(ShoeDetailsFragment())
-            fragmentTransaction?.commit()
-            true
-        }*/
-
-    }
-
 }
