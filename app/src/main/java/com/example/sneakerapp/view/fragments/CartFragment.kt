@@ -48,16 +48,26 @@ class CartFragment : Fragment() {
     private fun initialiseLiveDataObservers() {
         cartViewModel.viewState.observe(viewLifecycleOwner, Observer { value->
             if (!value.isLoading) {
-                binding.itemsRecyclerview.apply {
-                    layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
-                    adapter = value.items?.let { CartItemAdapter(it) { shoe, position ->
-                        cartViewModel.removeFromCart(shoe.id)
-                        removalPosition = position
-                    } }?.apply {
-                        notifyItemRemoved(removalPosition)
-                        notifyItemRangeChanged(removalPosition, ShoppingCart.getCartItems().size)
+                if (value.items?.isEmpty() == true) {
+                    binding.cartLayout.visibility = View.GONE
+                    binding.emptyTextview.visibility = View.VISIBLE
+                }
+                else {
+                    binding.cartLayout.visibility = View.VISIBLE
+                    binding.emptyTextview.visibility = View.GONE
+
+                    binding.itemsRecyclerview.apply {
+                        layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+                        adapter = value.items?.let { CartItemAdapter(it) { shoe, position ->
+                            cartViewModel.removeFromCart(shoe.id)
+                            removalPosition = position
+                        } }?.apply {
+                            notifyItemRemoved(removalPosition)
+                            notifyItemRangeChanged(removalPosition, ShoppingCart.getCartItems().size)
+                        }
                     }
                 }
+
             }
 
         })
